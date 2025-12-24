@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Confirmed Orders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="orders-page">
+    <main class="orders-main">
+      <header class="orders-header">
+        <a class="logo-box" href="dashboard.html" aria-label="Back to dashboard">
+          <svg class="logo-mark" viewBox="0 0 64 48" aria-hidden="true">
+            <path d="M6 34h52L32 8 6 34Z" fill="none" stroke="white" stroke-width="2" />
+            <path d="M18 30l14-12 14 12" fill="none" stroke="white" stroke-width="2" />
+            <path d="M32 8v8" stroke="white" stroke-width="2" />
+          </svg>
+          <div class="logo-text">
+            <strong>The Event Factory</strong>
+            Excellence in every detail
+          </div>
+        </a>
+        <div class="orders-title">
+          <span>Confirmed Orders</span>
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M12 18h40v28H12z" fill="none" stroke="currentColor" stroke-width="3" />
+            <path d="M20 34l8 8 16-18" fill="none" stroke="currentColor" stroke-width="3" />
+            <path d="M26 14h12" stroke="currentColor" stroke-width="3" />
+          </svg>
+        </div>
+      </header>
+
+      <section class="orders-card">
+        <h2>Confirmed Orders</h2>
+        <div class="orders-toolbar">
+          <button class="add-row" type="button" data-table="confirmed_orders">Add row</button>
+          <button class="reset-button" type="button" data-clear-table="confirmed_orders">Clear all</button>
+        </div>
+        <table class="orders-table" data-table="confirmed_orders" data-columns="item,client,due_date,status,event">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Client</th>
+              <th>Due Date</th>
+              <th>Status</th>
+              <th>Event</th>
+            </tr>
+          </thead>
+          <tbody data-rows="confirmed_orders"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
