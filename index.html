@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Log In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="login-page">
+    <main class="page">
+      <div class="glow"></div>
+      <div class="frame"></div>
+
+      <section class="brand">
+        <div class="brand-lines"></div>
+        <p class="brand-kicker">The Light Factory</p>
+        <h1>
+          Excellence In Every Detail
+        </h1>
+      </section>
+
+      <section class="card" aria-label="Log in">
+        <div class="card-header">
+          <span class="orb"></span>
+          <h2>Log in</h2>
+          <p>Access your workspace in seconds.</p>
+        </div>
+
+        <div class="login-message" id="loginMessage" role="status" aria-live="polite" hidden></div>
+
+        <form class="login-form" id="loginForm">
+          <label class="field">
+            <span>Username</span>
+            <div class="input-wrap">
+              <span class="icon" aria-hidden="true">@</span>
+          <input type="text" name="username" placeholder="Username or email" required />
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <div class="input-wrap">
+              <span class="icon" aria-hidden="true">*</span>
+              <input type="password" name="password" placeholder="Password" required />
+            </div>
+          </label>
+
+          <div class="row">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a class="link" href="#">Forgot password?</a>
+          </div>
+
+          <button class="primary" type="submit">Log in</button>
+        </form>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
